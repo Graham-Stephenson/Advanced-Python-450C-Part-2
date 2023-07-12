@@ -1674,6 +1674,8 @@ print("%s %i %i %i %i" % (rc.id, len(rc), len(rc.features), len(rc.dbxrefs), len
 
 ## Sequence Input/Output (All parts)
 
+### Summary: In this notebook, we explore a new GitHub fasta file sequence and identify the IDs and lengths of the sequences. We isolate certain components of the sequence that we want such as ID and descriptions. We identify the different annotations within the sequence, isolating the organism and source. We then print all species located within the sequence. We import 3 different genome sequences from 3 different species, and compare their components. 
+
 ```python
 from Bio import SeqIO
 ```
