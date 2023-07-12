@@ -4,6 +4,8 @@
 
 ## Sequence Objects (All parts)
 
+### Summary: In this notebook, we learn how to explore properties of a biopython sequence and how to manipulate it. We are able to find lengths, isolate desired portions and define these certain portions. We also find the translated version, reverse complement, and transcribed version of our sequence. We can also print tables to better see our sequence and identify certain stop and start codons. We can also mutate desired portions or locations of our sequence.  
+
 ```python
 from Bio.Seq import Seq
 ```
