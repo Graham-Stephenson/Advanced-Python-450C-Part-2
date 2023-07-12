@@ -4452,6 +4452,8 @@ aligner.score(target, query, strand = "+")
 
 ## OpenCV (All Parts)
 
+### Summary: In this notebook, we begin by importing any image, mine being a tennis picture, lol. We are able to manipulate the color of the image in many ways, as well as the dimensions and configuration of the image. Next, we import another picture, mine being the Association of Tennis Professions logo :). We can also manipulate this picture similarly. We then are able to overlap the 2 imported images over and behind each other with different percentages of overlay. Next, we import a rainbow image and a crossword puzzle image from GitHub. With these pictures, we are also able to manipulate the threshold, color, and adaptive threshold. With the crossword puzzle, we are able to change the adaptive threshold and weight of the image, blending portions of the image such as the black boxes. 
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
