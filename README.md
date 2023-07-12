@@ -5187,6 +5187,8 @@ show_pic(blended)
 
 ## Corner Detection
 
+### Summary: In this notebook, we continue our similar skills of last notebook with newly imported images, this time a blank checkerboard and one with pieces. We can change the color of both images, changing them to grayscale. We also able to detect the corners of the checkerboard, highlighting them in a bright red color, as well as the other board with red and green specks.  
+
 ```python
 import cv2
 import numpy as np
