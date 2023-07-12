@@ -5379,6 +5379,8 @@ plt.imshow(real_chess)
 
 ## Edge Detection
 
+### Summary: In this notebook, we focus on manipulating an image of a mushroom's saturation by changing the threshold, while highlighting the edges of the image. The settings are able to detect the edges of the mushroom, while blocking out any of the background. 
+
 ```python
 import cv2
 ```
