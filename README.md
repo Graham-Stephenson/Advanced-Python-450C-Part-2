@@ -3042,6 +3042,8 @@ SeqIO.write(records, "rev_comp.fasta", "fasta")
 
 ## Multiple Sequence Alignment (All parts) 
 
+### Summary: In this notebook, we explore an imported GitHub file, along with new file names such as phylip, stockholm, and clustal. We explore the sequence's components, while isolating desired portions. We then import 3 new align sequences, naming them Alpha-Iota. We are able to isolate desired rows of our sequence alignment, while also editing parts of our sequence. At the end, we print an ascii tree to better display sequences and their similarities to each other. 
+
 ```python
 #https://raw.githubusercontent.com/biopython/biopython/master/Doc/examples/PF05371_seed.sth
 ```
