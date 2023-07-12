@@ -6032,5 +6032,145 @@ for m in methods:
 ```python
 
 ```
+## Challenge
+
+### I am including what I had from my own blast, the challenge section. I used a cancer gene of prostate cancer from NCBI.com. I was having issues getting pieces to run, such as random errors stating I had 2 of the same files, when this was not the case. I will attach what I was able to obtain. I also blasted the genome on the NCBI.com website instead, due to errors in Praxis. 
+
+```python
+from Bio.Seq import Seq
+```
+
+
+```python
+from Bio.Blast import NCBIWWW
+from Bio.Blast import NCBIXML
+```
+
+
+```python
+NCBIWWW.email = "gbs010@latech.edu"
+```
+
+
+```python
+result_handle = NCBIWWW.qblast("blastn", "nt", "101867536")
+```
+
+
+```python
+#https://www.ncbi.nlm.nih.gov/gene/101867536
+```
+
+
+```python
+from Bio import SeqIO
+```
+
+
+```python
+record = SeqIO.read("cancer_genome", format = "fasta")
+```
+
+#### This is where my error occured. There was only 1 file with this name, but Praxis kept giving me this error. I continued the blast process, but only through the NCBI website. My blast findings are labeled at the bottom of the notebook. 
+
+    ---------------------------------------------------------------------------
+
+    ValueError                                Traceback (most recent call last)
+
+    <ipython-input-35-da255a4d9d40> in <module>
+    ----> 1 record = SeqIO.read("cancer_genome", format = "fasta")
+    
+
+    ~/anaconda3/lib/python3.7/site-packages/Bio/SeqIO/__init__.py in read(handle, format, alphabet)
+        657     try:
+        658         next(iterator)
+    --> 659         raise ValueError("More than one record found in handle")
+        660     except StopIteration:
+        661         pass
+
+
+    ValueError: More than one record found in handle
+
+
+
+```python
+print(record)
+```
+
+
+ 
+
+
+
+```python
+result_handle = NCBIWWW.qblast("blastn", "nt", record.seq)
+```
+
+
+
+
+
+```python
+with open ("cancer_genome", "w") as out_handle:
+    out_handle.write(result_handle.read())
+result_handle.close()
+```
+
+
+
+
+
+
+```python
+result_handle = open("my_blast.xml")
+```
+
+
+
+
+
+```python
+blast_record = NCBIXML.read(result_handle)
+```
+
+
+
+
+```python
+E_VALUE_THRESH = 0.04
+```
+
+
+```python
+for alignment in blast_record.alignments:
+    for hsp in alignment.hsps:
+        if hsp.expect < E_VALUE_THRESH:
+            print("****ALIGNMENT****")
+            print("sequence:", alignment.title)
+            print("length:", alignment.length)
+            print("e value:", hsp.expect)
+            print(hsp.query[0:75] + "...")
+            print(hsp.match[0:75] + "...")
+            print(hsp.sbjct[0:75] + "...")
+```
+
+
+
+
+
+
+```python
+# The e value when compared to chimpanzee is 0.0, where the other gene was 0.04.
+```
+
+
+```python
+pip install biopython
+```
+
+
+```python
+
+```
 
 
