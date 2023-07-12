@@ -3761,6 +3761,8 @@ Phylo.draw_ascii(tree)
 
 ## Pairwise Alignment
 
+### Summary: In this notebook, we are able to use Pairwise Aligner to match portions of our sequences together. We obtain the score of our alignment based on how many letters of our target and query sequences match. By using local alignments, we are able to match our 2 sequences without correct order, unlike Pairwise Alignment. We are also able to look at our alignments in a horizontal configuration known as bed format. 
+
 ```python
 from Bio import Align
 ```
