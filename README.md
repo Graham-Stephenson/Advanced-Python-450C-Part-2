@@ -5623,6 +5623,8 @@ plt.imshow(edges)
 
 ## Feature Matching
 
+### Summary: In this notebook, we focus on matching an individual item from an image including this item as well as others. In this example, I used the Golden Grahams cereal and try to match it in a picture of lots of cereals, Golden Grahams being one of them. We are able to change the color of these images, as we always have. We are then able to compare the two images side-by-side with lines drawn from our Golden Grahams image to the grid of cereals image. The lines connect to the smaller Golden Grahams box among the array of cereals. We are also able to display the Flann matches of our two images, with red circles identifying similarities. Unfortunately, our Golden Graham image did not have any good matches, but it did have 911 total matches. 
+
 ```python
 import cv2
 import numpy as np
