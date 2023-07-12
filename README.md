@@ -5840,6 +5840,8 @@ display(flann_matches)
 
 ## Object Detection
 
+### Summary: In this notebook, we focus on a similar aspect of the last notebook, yet more specific. Where we were focusing on identifying similar features in the last notebook, in this notebook, we are trying to identify a single object among a larger image. In this example, we upload an image of a single sunflower, as well as a field of sunflowers. We are trying to detect the sunflowers in our testing image by matching it to our training image of a single sunflower. Unfortunately, I was unable to have similar results as Dr. VDB. After trying multiple different training and testing images, nothing changed in our heatmap. The heatmap remained completley purple, which is showing too much detection, where only portions should have been singles out. 
+
 ```python
 import cv2
 ```
