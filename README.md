@@ -999,6 +999,8 @@ translate(my_string)
 
 ## Sequence Annotation (All parts)
 
+### Summary: In this notebook, we again explore certain aspects of our imported code such as ID, descriptions, and annotations. We also explore an new imported fasta file and its components. We explore the locations of a newly imported GitHub genbank file and manipulate our position in the sequence. Lastly, we are able to print desired components of our imported file such as lengths of rc, features, dbxrefs, and annotations.
+
 ```python
 from Bio.SeqRecord import SeqRecord
 ```
